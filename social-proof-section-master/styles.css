@@ -98,7 +98,7 @@ section:first-child {
   section:first-child > article {
     width: 445px; }
 
-.text_wrap > h1 {
+.text_wrap > h2 {
   font-size: 48px;
   font-weight: 700;
   color: #512051;
@@ -247,7 +247,7 @@ section:nth-child(2) {
     section .text_wrap {
       width: 100% !important;
       text-align: center; }
-      section .text_wrap h1 {
+      section .text_wrap h2 {
         margin-bottom: 18px;
         font-size: 32px;
         line-height: 32px;

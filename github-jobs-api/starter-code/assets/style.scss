@@ -1,0 +1,299 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav, ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle;}
+input[type="text"] {border:none; background:none; width: 95%; padding:12px 5px;}
+
+
+$violet: #5964E0;
+$lightViolet: #939bf4;
+$veryDarkBlue: #19202d;
+$midnight: #121721;
+$white: #fff;
+$lightGray: #f4f6f8;
+$gray: #9daec2;
+$darkGray: #6e8098;
+
+* {
+  font-family: 'Kumbh Sans, sans-serif';
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="button"] {
+  text-align:center;
+  color: $white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  height: 48px;
+  background: $violet;
+}
+
+input[type="button"]:hover {
+  background: $lightViolet;
+}
+
+html {
+  background: $white;
+}
+
+body {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  background-image: url('./desktop/bg-pattern-header.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 162px;
+  padding: 45px 165px;
+
+  ul {
+    display: flex ;
+    justify-content: space-between;
+  }
+
+  // i {
+  //   color: $white;
+  //   font-size: 20px;
+  // }
+
+  #color_scheme {
+    display: none;
+  }
+
+  .toggle_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .toggle_wrap {
+    position: relative;
+    margin: 0 16px;
+
+    label {
+      cursor: pointer;
+      display: block;
+      width: 48px;
+      height: 24px;
+      background: $white;
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+    }
+
+    label > span {
+      width: 14px;
+      height: 14px;
+      background: $violet;
+      position: absolute;
+      top:5px;
+      left: 5px;
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+    }
+
+    &:hover {
+      label > span {
+        background: $lightViolet;
+      }
+    }
+  }
+
+  input:active + div label > span,
+  input:checked + div label > span {
+    left: 29px;
+  }
+
+  .search_wrap {
+    position: absolute;
+    width: 1110px;
+    height: 80px;
+    border-radius:6px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    -ms-border-radius:6px;
+    -o-border-radius:6px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 121px;
+
+    > div {
+      display: flex;
+      align-items: center;
+      width: 33.33%;
+      height: 100%;
+    }
+
+    .icon {
+      margin-right: 13px;
+    }
+  }
+
+  .search_input {
+    padding: 28px 32px;
+  }
+
+  .search_location {
+    padding: 28px 23px;
+    border-left: 1px solid #6E8098;
+    border-right: 1px solid #6E8098;
+  }
+
+  .button_wrap {
+    justify-content: center;
+
+    input[type="button"] {
+      margin-left: 26px;
+      width: 123px;
+      height: 48px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      border-radius:3px;
+      -webkit-border-radius:3px;
+      -moz-border-radius:3px;
+      -ms-border-radius:3px;
+      -o-border-radius:3px;
+      background: $veryDarkBlue;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+article {
+  width: 100%;
+  text-align: center;
+}
+
+.jobs_wrap {
+  width: 1110px;
+  margin: 80px auto 56px;
+}
+
+.job_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  > div {
+    box-sizing: border-box;
+    position: relative;
+    width: 350px;
+    height: 228px;
+    padding: 49px 32px 0;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .job_logo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    left: 32px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 70%;
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $veryDarkBlue;
+    margin: 13px 0 17px;
+  }
+
+  .company {
+    color: $darkGray;
+  }
+
+  .location {
+    color: $violet;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 41px;
+  }
+}
+
+#loadMore {
+  width: 141px;
+  margin: 0 auto 140px;
+}
+
+
+// $logoBg1: #DF6DAE; $logoBg1: #3DB3D1; $logoBg1: #3D3B94; $logoBg1: #F0B62A; $logoBg1: #E66D; $logoBg1: #222121; $logoBg1: #5964E0; $logoBg1: #FB7E66; $logoBg1: #007CFF; $logoBg1: #492A29; $logoBg1: #60DCAD; $logoBg1: #FF585F;
+$logoBg: #DF6DAE, #3DB3D1, #3D3B94, #F0B62A, #E66D, #222121, #5964E0, #FB7E66, #007CFF, #492A29, #60DCAD, #FF585F;
+
+@for $i from 1 through length($logoBg) {
+  .job:nth-child(#{length($logoBg)}n + #{$i}) .job_logo {
+    background-color: unquote(nth($logoBg, $i))
+  }
+}
+
+html[data-light-mode="dark"] {
+  background: $veryDarkBlue;
+  color: $white;
+
+  header {
+    .search_wrap {
+      background: $veryDarkBlue;
+    }
+  }
+
+  .job_inner {
+    .title {
+      color: $white;
+    }
+  }
+}

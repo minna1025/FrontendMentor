@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&family=Kumbh+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css" >
+  <title>Github Jobs Api</title>
+</head>
+<body>
+  <header>
+    <ul>
+      <li class="logo"><img src="./assets/desktop/logo.svg" alt ="logo" /></li>
+      <li class="toggle_button">
+        <img class="icon sun" src="./assets/desktop/icon-sun.svg" alt="icon-sun" />
+        <input type="checkbox" name="color_scheme" id="color_scheme" value="" />
+        <div class="toggle_wrap">
+          <label for="color_scheme">
+            <span></span>
+          </label>
+        </div>
+        <img class="icon moon" src="./assets/desktop/icon-moon.svg" alt="icon-moon" />
+      </li>
+    </ul>
+    <div class="search_wrap">
+      <div class="search_input">
+        <img class="icon search" src="./assets/desktop/icon-search.svg" alt="icon-search" />
+        <input type="text" class="searchInput" placeholder="Filter by title, companies, expertise" name="search" value="" />
+      </div>
+      <div class="search_location">
+        <img class="icon location" src="./assets/desktop/icon-location.svg" alt="icon-location" />
+        <input type="text" class="searchLocation" placeholder="Filter by location" name="search_location" value="" />
+      </div>
+      <div class="button_wrap">
+        <input type="checkbox" name="full_time_only" id="full_time_only" value=""/>
+        <label for="full_time_only">Full Time Only</label>
+        <input type="button" name="searchButton" id="searchButton" value="Search" />
+      </div>
+    </div>
+  </header>
+  <article>
+    <div class="jobs_wrap"></div>
+    <input type="button" name="loadMore" id="loadMore" value="Load More" />
+  </article>
+  <script type="text/javascript" src="./assets/common.js" />
+</body>
+</html>

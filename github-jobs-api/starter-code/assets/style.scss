@@ -7,7 +7,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{di
 nav, ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:none}
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent; text-decoration:none;}
 ins{background-color:#ff9;color:#000;text-decoration:none}
 mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
 del{text-decoration:line-through}
@@ -31,6 +31,11 @@ $darkGray: #6e8098;
   font-family: 'Kumbh Sans, sans-serif';
   box-sizing: border-box;
   font-size: 16px;
+  color: $veryDarkBlue;
+}
+
+a:hover {
+  color: $darkGray;
 }
 
 input[type="button"] {
@@ -45,6 +50,8 @@ input[type="button"] {
   cursor: pointer;
   height: 48px;
   background: $violet;
+  box-shadow: none;
+  border: none;
 }
 
 input[type="button"]:hover {
@@ -53,9 +60,15 @@ input[type="button"]:hover {
 
 html {
   background: $white;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 body {
+  position: relative;
   width: 1440px;
   margin: 0 auto;
 }
@@ -72,11 +85,6 @@ header {
     display: flex ;
     justify-content: space-between;
   }
-
-  // i {
-  //   color: $white;
-  //   font-size: 20px;
-  // }
 
   #color_scheme {
     display: none;
@@ -103,12 +111,7 @@ header {
       -moz-border-radius: 12px;
       -ms-border-radius: 12px;
       -o-border-radius: 12px;
-      transition: all 0.5s ease-in-out;
-      -webkit-transition: all 0.5s ease-in-out;
-      -moz-transition: all 0.5s ease-in-out;
-      -ms-transition: all 0.5s ease-in-out;
-      -o-transition: all 0.5s ease-in-out;
-    }
+}
 
     label > span {
       width: 14px;
@@ -122,6 +125,11 @@ header {
       -moz-border-radius: 12px;
       -ms-border-radius: 12px;
       -o-border-radius: 12px;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
     }
 
     &:hover {
@@ -135,74 +143,118 @@ header {
   input:checked + div label > span {
     left: 29px;
   }
+}
 
-  .search_wrap {
-    position: absolute;
-    width: 1110px;
-    height: 80px;
-    border-radius:6px;
-    -webkit-border-radius:6px;
-    -moz-border-radius:6px;
-    -ms-border-radius:6px;
-    -o-border-radius:6px;
-    background: #fff;
+
+.search_wrap {
+  position: absolute;
+  width: 1110px;
+  height: 80px;
+  border-radius:6px;
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  -ms-border-radius:6px;
+  -o-border-radius:6px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 121px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+
+  > div {
+    display: flex;
+    align-items: center;
+    width: 33.33%;
+    height: 100%;
+  }
+
+  .icon {
+    margin-right: 13px;
+  }
+}
+
+.search_input {
+  padding: 28px 32px;
+  flex-basis: 463px;
+}
+
+.search_location {
+  padding: 28px 23px;
+  border-left: 1px solid #6E8098;
+  border-right: 1px solid #6E8098;
+  flex-basis: 301px;
+}
+
+.button_wrap {
+  justify-content: center;
+
+  input[type="button"] {
+    margin-left: 26px;
+    width: 123px;
+    height: 48px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  input[type="checkbox"] {display: none;}
+
+  input[type="checkbox"] + label {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    top: 121px;
-
-    > div {
-      display: flex;
-      align-items: center;
-      width: 33.33%;
-      height: 100%;
-    }
-
-    .icon {
-      margin-right: 13px;
-    }
+    line-height: 29px;
   }
 
-  .search_input {
-    padding: 28px 32px;
+  input[type="checkbox"] + label:before {
+    content: '';
+    display: inline-block;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -ms-border-radius:3px;
+    -o-border-radius:3px;
+    background: $veryDarkBlue;
+    opacity: 10.35%;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
   }
 
-  .search_location {
-    padding: 28px 23px;
-    border-left: 1px solid #6E8098;
-    border-right: 1px solid #6E8098;
+  input[type="checkbox"]:hover + label:before {
+    background: $violet;
+    opacity: 25%;
   }
 
-  .button_wrap {
-    justify-content: center;
+  input[type="checkbox"]:checked + label:before {
+    background-color: $violet;
+    opacity: 1;
+  }
 
-    input[type="button"] {
-      margin-left: 26px;
-      width: 123px;
-      height: 48px;
-      border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
-    }
-
-    input[type="checkbox"] {
-      border-radius:3px;
-      -webkit-border-radius:3px;
-      -moz-border-radius:3px;
-      -ms-border-radius:3px;
-      -o-border-radius:3px;
-      background: $veryDarkBlue;
-      width: 24px;
-      height: 24px;
-    }
+  input[type="checkbox"]:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('./desktop/icon-check.svg') no-repeat;
+    width: 13px;
+    height: 10px;
+    left: 5px;
+    top: 6px;
   }
 }
 
 article {
   width: 100%;
   text-align: center;
+  margin-top: 119px;
 }
 
 .jobs_wrap {
@@ -227,6 +279,7 @@ article {
   }
 
   .job_logo {
+    z-index: 2;
     width: 50px;
     height: 50px;
     position: absolute;
@@ -245,6 +298,10 @@ article {
     img {
       width: 70%;
     }
+  }
+
+  .dates {
+    color: $darkGray;
   }
 
   .title {
@@ -266,6 +323,35 @@ article {
   }
 }
 
+.skeleton_inner {
+  width: 350px;
+  height: 228px;
+  overflow: hidden;
+  position: relative;
+  margin-top: -49px;
+  margin-left: -32px;
+}
+.skeletone > .skeleton_inner::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  background: linear-gradient(to right, transparent 0%, $lightViolet 50%, transparent 100%);
+  animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+@keyframes load {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
 #loadMore {
   width: 141px;
   margin: 0 auto 140px;
@@ -282,18 +368,30 @@ $logoBg: #DF6DAE, #3DB3D1, #3D3B94, #F0B62A, #E66D, #222121, #5964E0, #FB7E66, #
 }
 
 html[data-light-mode="dark"] {
-  background: $veryDarkBlue;
+  background: $midnight;
   color: $white;
 
-  header {
-    .search_wrap {
-      background: $veryDarkBlue;
-    }
+  a {
+    color: $white;
+  }
+
+  .search_wrap {
+    background: $veryDarkBlue;
+  }
+  input[type="checkbox"] + label:before {
+    background: $white;
+  }
+
+  input[type='text'] {
+    color: $white;
   }
 
   .job_inner {
     .title {
       color: $white;
+    }
+    .job {
+      background: $veryDarkBlue;
     }
   }
 }

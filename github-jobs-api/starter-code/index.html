@@ -23,26 +23,86 @@
         <img class="icon moon" src="./assets/desktop/icon-moon.svg" alt="icon-moon" />
       </li>
     </ul>
-    <div class="search_wrap">
-      <div class="search_input">
-        <img class="icon search" src="./assets/desktop/icon-search.svg" alt="icon-search" />
-        <input type="text" class="searchInput" placeholder="Filter by title, companies, expertise" name="search" value="" />
-      </div>
-      <div class="search_location">
-        <img class="icon location" src="./assets/desktop/icon-location.svg" alt="icon-location" />
-        <input type="text" class="searchLocation" placeholder="Filter by location" name="search_location" value="" />
-      </div>
-      <div class="button_wrap">
-        <input type="checkbox" name="full_time_only" id="full_time_only" value=""/>
-        <label for="full_time_only">Full Time Only</label>
-        <input type="button" name="searchButton" id="searchButton" value="Search" />
-      </div>
-    </div>
   </header>
   <article>
-    <div class="jobs_wrap"></div>
-    <input type="button" name="loadMore" id="loadMore" value="Load More" />
+    <div class="main_wrap">
+      <div class="search_wrap">
+        <div class="search_input">
+          <img class="icon search" src="./assets/desktop/icon-search.svg" alt="icon-search" />
+          <input type="text" class="searchInput" placeholder="Filter by title, companies, expertise" name="search" value="" />
+        </div>
+        <div class="search_location">
+          <img class="icon location" src="./assets/desktop/icon-location.svg" alt="icon-location" />
+          <input type="text" class="searchLocation" placeholder="Filter by location" name="search_location" value="" />
+        </div>
+        <div class="button_wrap">
+          <input type="checkbox" name="full_time_only" id="full_time_only" value=""/>
+          <label for="full_time_only">Full Time Only</label>
+          <input type="button" name="searchButton" id="searchButton" value="Search" />
+        </div>
+      </div>
+      <div class="jobs_wrap">
+        <div class="job_inner" >
+          <div class="job skeletone">
+            <h2 class="job_logo"><img src="./assets/desktop/logo.svg" /></h2>
+            <div class="skeleton_inner">
+              <p class="dates"></p>
+              <h3 class="title"></h3>
+              <p class="company"></p>
+              <p class="location"></p>
+            </div>
+          </div>
+          <div class="job skeletone">
+            <h2 class="job_logo"><img src="./assets/desktop/logo.svg" /></h2>
+            <div class="skeleton_inner">
+              <p class="dates"></p>
+              <h3 class="title"></h3>
+              <p class="company"></p>
+              <p class="location"></p>
+            </div>
+          </div>
+          <div class="job skeletone">
+            <h2 class="job_logo"><img src="./assets/desktop/logo.svg" /></h2>
+            <div class="skeleton_inner">
+              <p class="dates"></p>
+              <h3 class="title"></h3>
+              <p class="company"></p>
+              <p class="location"></p>
+            </div>
+          </div>
+          <div class="job skeletone">
+            <h2 class="job_logo"><img src="./assets/desktop/logo.svg" /></h2>
+            <div class="skeleton_inner">
+              <p class="dates"></p>
+              <h3 class="title"></h3>
+              <p class="company"></p>
+              <p class="location"></p>
+            </div>
+          </div>
+          <div class="job skeletone">
+            <h2 class="job_logo"><img src="./assets/desktop/logo.svg" /></h2>
+            <div class="skeleton_inner">
+              <p class="dates"></p>
+              <h3 class="title"></h3>
+              <p class="company"></p>
+              <p class="location"></p>
+            </div>
+          </div>
+          <div class="job skeletone">
+            <h2 class="job_logo"><img src="./assets/desktop/logo.svg" /></h2>
+            <div class="skeleton_inner">
+              <p class="dates"></p>
+              <h3 class="title"></h3>
+              <p class="company"></p>
+              <p class="location"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="button" name="loadMore" id="loadMore" value="Load More" />
+    </div>
   </article>
-  <script type="text/javascript" src="./assets/common.js" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+  <script type="text/javascript" src="./assets/common.js" ></script>
 </body>
 </html>

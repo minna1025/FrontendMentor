@@ -1,15 +1,21 @@
 <template>
-  <!-- <HelloWorld msg="Hello Vue 3.0 + Vite" /> -->
+  <Header />
   <p>github user search app!</p>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
 
 export default {
   name: "App",
   components: {
-    // HelloWorld,
+    Header,
   },
 };
 </script>
+
+<style lang="scss">
+p {
+  font-size: 20px;
+}
+</style>

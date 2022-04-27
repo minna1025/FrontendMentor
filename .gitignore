@@ -26,3 +26,5 @@
 
 *.zip
 .idea
+css/main.min.css
+css/main.min.css.map

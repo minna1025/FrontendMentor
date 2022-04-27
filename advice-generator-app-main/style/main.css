@@ -37,6 +37,7 @@ p {
   padding: 48px;
   background-color: #323a49;
   text-align: center;
+  font-weight: 800;
   -webkit-box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
           box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
   border-radius: 15px;
@@ -49,7 +50,6 @@ p {
 .advice-number {
   text-transform: uppercase;
   color: #52ffa8;
-  font-weight: 800;
   font-size: 13px;
   letter-spacing: 4.08571px;
 }

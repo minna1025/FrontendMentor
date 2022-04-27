@@ -28,10 +28,15 @@ p {
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .advice {
   position: relative;
   font-family: $font-family;
-  width: 540px;
+  max-width: 540px;
+  width: 100%;
   height: fit-content;
   padding: 48px;
   background-color: $color-dark_gray_blue;
